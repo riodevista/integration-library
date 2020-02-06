@@ -60,7 +60,7 @@ public class OpenSellReceiptCommand implements IBundlable {
     }
 
     public void process(@NonNull final Activity activity, IntegrationManagerCallback callback) {
-        Objects.requireNonNull(null);
+        Objects.requireNonNull(activity);
 
         List<ComponentName> componentNameList = IntegrationManagerImpl.convertImplicitIntentToExplicitIntent(NAME, activity.getApplicationContext());
         if (componentNameList == null || componentNameList.isEmpty()) {
